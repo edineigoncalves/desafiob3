@@ -14,10 +14,9 @@ Projeto criado para o desafio da B3 pela consultoria BRQ
 ## ENDPOINTS E EXEMPLOS DE CHAMADAS : 
 http://localhost:8080/swagger-ui.html#/user-controller/
 
-###  User 
-
+###  Cadastro de usuário 
+http://localhost:8080/v1/desafio/user/save
 #####  Inserção
-
 ```json
   {
   "birthDate": "1990-10-18",
@@ -27,7 +26,6 @@ http://localhost:8080/swagger-ui.html#/user-controller/
 ```
 
 ###### Exemplo de Retorno de Sucesso - 200 OK
-
 ```json
 {
   "userId": 3,
@@ -40,7 +38,6 @@ http://localhost:8080/swagger-ui.html#/user-controller/
 ##### Consulta
 http://localhost:8080/v1/desafio/user/all
 ###### Consultar todos os usuários cadastrados - 200 OK
-
 ```json
 [
   {
@@ -65,8 +62,7 @@ http://localhost:8080/v1/desafio/user/all
 ```
 
 http://localhost:8080/v1/desafio/user/companyId/1
-###### Consultar empresa por id - 200 OK
-
+###### Consultar usuário por empresa por id - 200 OK
 ```json
 [
   {
@@ -92,7 +88,6 @@ http://localhost:8080/v1/desafio/user/companyId/1
 
 http://localhost:8080/v1/desafio/user/email/e%40e.com.br
 ###### Consultar usuário por email por id - 200 OK
-
 ```json
 [
   {
@@ -114,4 +109,27 @@ http://localhost:8080/v1/desafio/user/email/e%40e.com.br
     "birthDate": 656208000000
   }
 ]
+```
+
+http://localhost:8080/v1/desafio/user/userId/1
+###### Consultar usuário por id - 200 OK
+```json
+{
+  "userId": 1,
+  "companyId": 1,
+  "email": "joao@gmail.com.br",
+  "birthDate": 771897600000
+}
+```
+
+##### Delete
+http://localhost:8080/v1/desafio/user/delete/1
+###### Remover usuário conforme id - 200 OK
+```json
+{
+    "userId": 1,
+    "companyId": 1,
+    "email": "joao@gmail.com.br",
+    "birthDate": 771897600000
+  }
 ```

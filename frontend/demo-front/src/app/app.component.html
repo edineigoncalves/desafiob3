@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico">
+
+    <title>Top navbar example for Bootstrap</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/navbar-static/">
+  </head>
+
+  <body>
+
+    <main role="main" class="container">
+      <div class="jumbotron">
+        <div class="main-content">
+          <div class="container-fluid">
+        
+            <div class="row">
+              <div class="col-md-12">
+                <div class="card">
+                  <div class="card-header card-header-info">
+                    <h4 class="card-title">{{ titulo }}
+              
+                    </h4>
+                  </div>
+                  <div class="card-body" >
+                      <form #form="ngForm" (ngSubmit)="salvar(form.value)">
+                        <div class="row">
+                          <div class="col-md-4">
+                            <p>UserId</p>
+                            <input type="text" name="userId"  [(ngModel)]="userId" >
+                          </div>
+                          <div class="col-md-4">
+                            <p>CompanyID</p>
+                            <input type="text" name="companyId"  [(ngModel)]="companyId">
+                          </div>
+                        </div>
+
+                        <div class="row">
+                          <div class="col-md-4">
+                            <p>email</p>
+                            <input type="text" name="email"  [(ngModel)]="useemailrId">
+                          </div>
+                          <div class="col-md-4">
+                            <p>birthDate</p>
+                            <input type="text" name="birthDate"  [(ngModel)]="birthDate">
+                          </div>
+
+                        </div>
+                        
+                        <dib class="row">
+                          <button  type="submit"  class="btn btn-outline-info pull-right">Confirmar</button>
+                        </dib>
+
+                      </form>
+                  </div>
+                </div>
+              </div>
+        
+            </div>
+        
+          </div>
+        </div>
+        
+      </div>
+    </main>
+
+  </body>
+</html>
